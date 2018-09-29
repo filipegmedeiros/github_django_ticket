@@ -1,0 +1,10 @@
+{% extends 'ticket/base.html' %}
+
+{% block content %}
+        <h3>Suporte</h3>
+        <h4>TVU FMU E SUPERINTENDENCIA</h4>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Enviar</button>
+    </form>
+{% endblock %}
