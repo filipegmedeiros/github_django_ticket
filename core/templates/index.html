@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Tickets da Comunica</title>
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ticket.css' %}">
+    </head>
+
+    <div class="container"> 
+
+    {% if retorno is not None %}
+
+        {% if retorno.status == 'success' %}
+            <span class="mensagem mensagem-sucesso">
+                {{ retorno.message}}
+                <p>Acompanhe-o por <b><a href="{{ retorno.data }}" target="_blank">aqui</a></b></p>
+            </span>
+        {% endif %}
+        
+        {% if retorno.status == 'error' %}
+            <span class="mensagem mensagem-erro">
+                {{ retorno.message}}
+            </span>
+        {% endif %}
+
+    {% endif %}
+
+    <form id="contact" action="{% url 'criar_chamado' %}" method="post">
+        {% csrf_token %}
+
+        <h3>Suporte</h3>
+        <h4>Informática</h4>
+
+        <fieldset>
+        <input placeholder="Seu Nome" type="text" tabindex="1" required autofocus name="autor">
+        </fieldset>
+
+        <fieldset>
+        <input placeholder="Seu Setor" type="text" tabindex="1" required autofocus name="setor">
+        </fieldset>
+        
+        <fieldset>
+        <input placeholder="Título do Problema" type="text" tabindex="1" required autofocus name="titulo">
+        </fieldset>
+
+        <fieldset>
+        <textarea placeholder="Escreva o chamado aqui..." tabindex="5" required name="conteudo"></textarea>
+        </fieldset>
+
+        <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar </button>
+        </fieldset>
+    
+    </form>
+    </div>
+</html>
