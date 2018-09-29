@@ -23,6 +23,7 @@
 ~~~
  
 | **Github da pessoa que fez 99% do projeto:**            | 
+| ----------------------------------------------------    |
 | • [Marlysson](https://github.com/Marlysson)             |
 
 
