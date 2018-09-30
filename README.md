@@ -2,10 +2,15 @@
 
                                           ``` @usuariolinux   ```                 
                         ``` Copie, altere, arrume e use``` 
+<p align="center">
+    <a href="https://github.com/filipegmedeiros/github_django_ticket/blob/master/LICENSE.md">
+        <img src="https://img.shields.io/github/license/filipegmedeiros/github_django_ticket.svg?longCache=true&style=for-the-badge"
+             alt="Progresso do Projeto" /></a>
+</p>
 
 <p align="center">
     <a href="https://github.com/filipegmedeiros/github_django_ticket">
-        <img src="https://img.shields.io/badge/Progresso%20do%20Projeto-50%25-green.svg"
+        <img src="https://img.shields.io/badge/VERSION-V.10-red.svg?longCache=true&style=for-the-badge"
              alt="Progresso do Projeto" /></a>
 </p>
 
@@ -22,9 +27,9 @@
     de HTML
 ~~~
  
-| **Github da pessoa que fez 99% do projeto:**            | 
-| ----------------------------------------------------    |
-| • [Marlysson](https://github.com/Marlysson)             |
+| **Github da pessoa que ajudou substancialmente o projeto:**            | 
+| ----------------------------------------------------                   |
+| • [Marlysson](https://github.com/Marlysson)                            |
 
 
 
@@ -38,7 +43,7 @@
     git clone https://github.com/ticketcomunica/ticket
     cd ticket
     python3 -m venv myenv
-     . myenv/bin/activate
+    . myenv/bin/activate
     pip install -r requirements.txt
     python manage.py makemigrations
     python manage.py migrate
